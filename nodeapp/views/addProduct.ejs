@@ -1,0 +1,34 @@
+<%- include('partials/header'); -%>
+
+    <h1>
+        <%= title %>
+    </h1>
+    <!-- Add Product Page -->
+    <div class="container">
+        <% if (message != '') { %>
+            <p class="text-center text-danger"><%= message %></p>
+        <% } %>
+        <form class="add-product-form" action="" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="strName" id="strName" placeholder="strName" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="nPrice" id="nPrice" placeholder="nPrice" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="strDescription" id="strDescription" placeholder="strDescription" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12">
+                    <label for="product-img"><b>Product Image</b></label><br>
+                    <input type="file" name="strImage" id="product-img" class="" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary float-right">Add a Product</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
